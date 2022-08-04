@@ -1,0 +1,43 @@
+/*Cái border này nếu muốn chỉnh riêng một cạnh của viền thì bắt buộc phải viết hết style của các viền còn lại?*/
+#body-style {
+  border-top: 2px solid black;
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  width: 700px;
+  margin: auto;
+}
+/*Có cách nào tìm font chữ và màu đúng như yêu cầu của bài không ạ?*/
+/*Em muốn cái dòng header này nó sát với viền top.
+Có cách nào khác ngoài set margin âm như dưới không?
+Khi code css có nên set margin, padding âm không?*/
+#header-style {
+  margin: -20px 10px 0px 10px;
+}
+
+#week1-style,
+#week2-style {
+  margin: 20px 40px 20px 40px;
+  padding: 10px 10px 10px 10px;
+  border: 3px solid blue;
+  background-color: skyblue;
+}
+
+.listhead-style {
+  color: blue;
+  font-weight: 500;
+}
+
+.listcontent-style1 {
+  font-size: 20px;
+}
+
+.listcontent-style2 {
+  font-size: 20px;
+}
+/*Ở phần này em muốn set cái dòng cuối cùng trong list là màu đỏ, trước đó em có thử dùng selection = last child nhưng không được. 
+Nó sẽ set màu đỏ cho cả dòng cuối cùng lẫn những dòng in nghiêng. 
+Ngoài cách set class cho riêng cái dòng cuối ra thì còn cách nào khác không?*/
+.last-content {
+  color: red;
+}
