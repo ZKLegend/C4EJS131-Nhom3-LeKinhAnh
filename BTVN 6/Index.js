@@ -14,7 +14,13 @@
 
 
 // BTVN 2: Convert "Hôm nay ngày thứ 7" sang "hômnay ngày thứ 8"
-let string1=`Hôm nay ngày thứ 7`;
-let string2= string1.toLowerCase();
-let string3= string2.replace (7,8);
-console.log('Result:', string3.slice(0,3) + string3.slice(4));
+// let string1=`Hôm nay ngày thứ 7`;
+// let string2= string1.toLowerCase();
+// let string3= string2.replace (7,8);
+// console.log('Result:', string3.slice(0,3) + string3.slice(4));
+
+console.log("hello, world!") 
+{
+    let x=1;
+    console.log(x);
+}
