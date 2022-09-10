@@ -6,6 +6,8 @@ a {
     color: white;
 }
 
+/* Poster Style */
+
 .poster-container {
     border: 1px solid black;
     position: relative;
@@ -19,8 +21,6 @@ a {
     margin: auto;
     height: 450px;
     border: solid 1px black;
-    /* flex-wrap: wrap; */
-    /* overflow: hidden; */
 }
 
 .slider1 {
