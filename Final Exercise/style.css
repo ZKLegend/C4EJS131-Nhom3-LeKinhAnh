@@ -1,0 +1,139 @@
+body {
+    background-color: #263238;
+}
+
+a {
+    color: white;
+}
+
+.poster-container {
+    border: 1px solid black;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.poster-slide{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 450px;
+    border: solid 1px black;
+    /* flex-wrap: wrap; */
+    /* overflow: hidden; */
+}
+
+.slider1 {
+    background-image: url(/img/silde-show\ 1.jpg);
+}
+
+.slider2 {
+    background-image: url(/img/slide-show\ 2.jpg);
+}
+
+.slider3 {
+    background-image: url(/img/slide-show\ 3.jpeg);
+}
+
+.slider4 {
+    background-image: url(/img/slide-show\ 4.jpg);
+}
+
+.slider5 {
+    background-image: url(/img/slide-show\ 5.jpg);
+}
+
+.items-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    border: 2px solid rgb(196, 29, 29);
+    background-color: rgba(245, 237, 237, 0.932);
+    padding-left: 15px;
+}
+
+.prevBtn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    margin-top: -40px;
+    font-size: 25px;
+    padding: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    color: white;
+}
+
+.nextBtn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 0;
+    margin-top: -40px;
+    font-size: 25px;
+    padding: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    color: white;
+}
+
+#watchBtn {
+    width: 50%; 
+}
+
+/* Category Style */
+
+.cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+    color: white;
+}
+
+.cat-container {
+    border: 1px solid black;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.cat-slide {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    margin: auto;
+    height: 250px;
+}
+
+.cat-slide img {
+    width: 300px;
+    height: 100%;
+}
+
+.catPrevBtn {
+    height: 250px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    font-size: 25px;
+    padding: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    color: white;
+}
+
+.catNextBtn {
+    height: 250px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    font-size: 25px;
+    padding: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    color: white;
+}
