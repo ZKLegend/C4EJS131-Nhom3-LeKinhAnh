@@ -1,9 +1,12 @@
 body {
+    width: 75%;
+    margin: auto;
     background-color: #263238;
 }
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 /* Poster Style */
@@ -11,47 +14,61 @@ a {
 .poster-container {
     border: 1px solid black;
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    overflow: hidden;   
+    /* Dùng cái overflow hidden cho cái poster-slide ở dưới thì nó hide hết ảnh luôn, còn dùng trên này thì không sao, chưa hiểu lắm */
 }
 
 .poster-slide{
     display: flex;
     width: 100%;
     margin: auto;
-    height: 450px;
+    height: 500px;
     border: solid 1px black;
+}
+
+.slide-content {
+    min-width: 100%;
 }
 
 .slider1 {
     background-image: url(/img/silde-show\ 1.jpg);
+    background-size: cover;
 }
 
 .slider2 {
     background-image: url(/img/slide-show\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slider3 {
     background-image: url(/img/slide-show\ 3.jpeg);
+    background-size: cover;
 }
 
 .slider4 {
     background-image: url(/img/slide-show\ 4.jpg);
+    background-size: cover;
 }
 
 .slider5 {
     background-image: url(/img/slide-show\ 5.jpg);
+    background-size: cover;
 }
 
 .items-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 50%;
+    width: 30%;
     height: 100%;
-    border: 2px solid rgb(196, 29, 29);
-    background-color: rgba(245, 237, 237, 0.932);
+    border: 1px solid rgb(196, 29, 29);
+    background-color: rgba(0,0,0,.4);
     padding-left: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .prevBtn {
@@ -59,7 +76,7 @@ a {
     z-index: 10;
     top: 50%;
     left: 0;
-    margin-top: -40px;
+    margin-top: -20px;
     font-size: 25px;
     padding: 10px;
     opacity: 0.5;
@@ -72,7 +89,7 @@ a {
     z-index: 10;
     top: 50%;
     right: 0;
-    margin-top: -40px;
+    margin-top: -20px;
     font-size: 25px;
     padding: 10px;
     opacity: 0.5;
@@ -81,40 +98,66 @@ a {
 }
 
 #watchBtn {
-    width: 50%; 
+    width: 30%; 
 }
 
 /* Category Style */
 
 .cat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 10px 0px 10px;
+    margin: 25px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 20px;
     color: white;
 }
 
 .cat-container {
-    border: 1px solid black;
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 .cat-slide {
     display: flex;
-    border: 1px solid black;
     width: 100%;
     margin: auto;
     height: 250px;
 }
 
-.cat-slide img {
-    width: 300px;
+.cat-item {
+    position: relative;
+    min-width: 20%;
+    height: 250px;
+}
+
+.playBtn-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 100%;
+    background-color: #78909c73;
+}
+
+.playBtn {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.cat-item:hover .playBtn-container {
+    display: block;
+}
+
+.cat-img {
+    display: block;
+    width: 100%;
+    height: 250px;
 }
 
 .catPrevBtn {
+    /* display: none; */
     height: 250px;
     position: absolute;
     z-index: 10;
@@ -127,6 +170,7 @@ a {
 }
 
 .catNextBtn {
+    /* display: none; */
     height: 250px;
     position: absolute;
     z-index: 10;
@@ -137,3 +181,6 @@ a {
     cursor: pointer;
     color: white;
 }
+
+
+

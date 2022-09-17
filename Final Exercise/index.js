@@ -1,22 +1,67 @@
 // Get Slide and Slide Content
-let catSlide = document.querySelector(".cat-slide");
 
+let posterSlide = document.querySelector(".poster-slide");
+let slideContent = document.querySelectorAll(".slide-content");
 
 // Register Button
-let prevBtn = document.querySelector('.catPrevBtn');
-let nextBtn = document.querySelector('.catNextBtn');
+let prevBtn = document.querySelector('.prevBtn');
+let nextBtn = document.querySelector('.nextBtn');
 
 
-// function chỉ chạy được 1 lần
+let counter = 0;
+let size = slideContent[0].clientWidth;
+
+// Poster Slide
 nextBtn.addEventListener('click', () => {
-    catSlide.style.transition = "transform 0.6s ease-in-out";
-    catSlide.style.transform = 'translateX('+ (-100) + '%)';
+    if (counter > slideContent.length - 2) {
+        counter = -1;
+    }
+    posterSlide.style.transition = "transform 0.6s ease-in-out";
+    counter++;
+    posterSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+    console.log(counter);
+    console.log(slideContent.length);
 });
 
 
 prevBtn.addEventListener('click', () => {
-    catSlide.style.transition = "transform 0.6s ease-in-out";
-    catSlide.style.transform = 'translateX('+ (100) + '%)';
+    if (counter < 1) {
+        counter = slideContent.length;
+    }
+    posterSlide.style.transition = "transform 0.6s ease-in-out";
+    counter--;
+    posterSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+    console.log(counter);
 });
 
-// Chưa nghĩ ra cách để slide chạy đến ảnh cuối cùng thì quay lại
+
+
+// Category 1 Slide Function
+let catSlide = document.querySelector('.cat-slide');
+let catItem = document.querySelectorAll('.cat-item');
+
+
+let catprevBtn = document.querySelector('.catPrevBtn');
+let catnextBtn = document.querySelector('.catNextBtn');
+
+
+catnextBtn.addEventListener('click', () => {
+    if (counter > (catItem.length/5) - 2) {
+        counter = -1;
+    }
+    catSlide.style.transition = "transform 0.6s ease-in-out";
+    counter++;
+    catSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+    console.log(counter);
+    console.log(catItem.length);
+});
+
+catprevBtn.addEventListener('click', () => {
+    if (counter < 1) {
+        counter = (catItem.length/5);
+    }
+    catSlide.style.transition = "transform 0.6s ease-in-out";
+    counter--;
+    catSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
+    console.log(counter);
+});
