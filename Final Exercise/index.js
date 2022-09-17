@@ -19,8 +19,6 @@ nextBtn.addEventListener('click', () => {
     posterSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     posterSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
-    console.log(counter);
-    console.log(slideContent.length);
 });
 
 
@@ -31,37 +29,35 @@ prevBtn.addEventListener('click', () => {
     posterSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     posterSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
-    console.log(counter);
 });
 
 
 
 // Category 1 Slide Function
 let catSlide = document.querySelector('.cat-slide');
-let catItem = document.querySelectorAll('.cat-item');
+let cat1Item = document.querySelectorAll('.cat1-slideItem');
 
 
 let catprevBtn = document.querySelector('.catPrevBtn');
 let catnextBtn = document.querySelector('.catNextBtn');
 
-
-catnextBtn.addEventListener('click', () => {
-    if (counter > (catItem.length/5) - 2) {
+function clickNextBtn(n) {
+    if (counter > (n/5) - 2) {
         counter = -1;
     }
     catSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     catSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
-    console.log(counter);
-    console.log(catItem.length);
-});
+}
+
+catnextBtn.addEventListener('click', clickNextBtn(cat1Item.length));
+
 
 catprevBtn.addEventListener('click', () => {
     if (counter < 1) {
-        counter = (catItem.length/5);
+        counter = (cat1Item.length/5);
     }
     catSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     catSlide.style.transform = 'translateX('+ (-size * counter) + 'px)';
-    console.log(counter);
 });
